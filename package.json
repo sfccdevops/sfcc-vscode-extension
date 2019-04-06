@@ -1,0 +1,99 @@
+{
+  "name": "sfcc-vscode-extension",
+  "displayName": "SFCC Context Menu",
+  "version": "1.0.0",
+  "description": "Context Menu to make Developing for Salesforce Commerce Cloud Easier",
+  "license": "MIT",
+  "publisher": "RedVanWorkshop",
+  "categories": [
+    "Other"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#00435f",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/redvanworkshop/sfcc-vscode-extension#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redvanworkshop/sfcc-vscode-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redvanworkshop/sfcc-vscode-extension/issues"
+  },
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "keywords": [
+    "salesforce",
+    "sfcc",
+    "commerce-cloud",
+    "demandware",
+    "sandbox",
+    "sfra",
+    "vscode",
+    "extension",
+    "context-menu"
+  ],
+  "contributors": [
+    {
+      "name": "Peter Schmalfeldt",
+      "email": "peter@redvanworkshop.com",
+      "url": "https://redvanworkshop.com"
+    }
+  ],
+  "activationEvents": [
+    "onCommand:extension.searchCommerceCloudDocs",
+    "onCommand:extension.openInBusinessManager"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.searchCommerceCloudDocs",
+        "title": "Search SFCC Docs"
+      },
+      {
+        "command": "extension.openInBusinessManager",
+        "title": "Open in BM"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.searchCommerceCloudDocs",
+          "when": "editorTextFocus && editorHasSelection && resourceExtname =~ /[isml|js]/)",
+          "group": "RVW@1"
+        },
+        {
+          "command": "extension.openInBusinessManager",
+          "when": "editorTextFocus && editorHasSelection && resourceExtname == .isml",
+          "group": "RVW@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "extension.searchCommerceCloudDocs",
+        "when": "editorHasSelection && resourceExtname =~ /[isml|js]/)",
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f"
+      }, {
+        "command": "extension.openInBusinessManager",
+        "when": "editorHasSelection && resourceExtname == .isml",
+        "key": "ctrl+shift+b",
+        "mac": "cmd+shift+b"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.22"
+  },
+  "dependencies": {
+    "opn": "^6.0.0",
+    "rxjs": "^6.4.0"
+  }
+}
