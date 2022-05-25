@@ -1,4 +1,4 @@
-![Logo](docs/img/logo.png "Logo")
+![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
 
 VS Code Extension
 ---
@@ -24,7 +24,7 @@ Final JSON should look something like this:
 ```json
 {
   "hostname": "dev01-web-sandbox.demandware.net",
-  "username": "developer@redvanworkshop.com",
+  "username": "me@email.com",
   "password": "supersecret",
   "code-version": "version1",
   "sitecode": "myclient-us"
@@ -53,8 +53,13 @@ Developer Overview
 
 > Here is how you can work on this extension on your local machine:
 
-1. Clone this repo to your local machine `git clone https://github.com/redvanworkshop/sfcc-vscode-extension.git`
+1. Clone this repo to your local machine `git clone https://github.com/sfccdevops/sfcc-vscode-extension.git`
 2. Open `sfcc-vscode-extension` folder in VS Code
 3. Open the `extension.js` file
 4. Press the `F5` key to build & launch a new instance of VS Code
 5. This extension will be installed the new instance for you to play with
+
+Disclaimer
+---
+
+> The trademarks and product names of Salesforce®, including the mark Salesforce®, are the property of Salesforce.com. SFCC DevOps is not affiliated with Salesforce.com, nor does Salesforce.com sponsor or endorse the SFCC DevOps products or website. The use of the Salesforce® trademark on this project does not indicate an endorsement, recommendation, or business relationship between Salesforce.com and SFCC DevOps.

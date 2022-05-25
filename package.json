@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Context Menu to make Developing for Salesforce Commerce Cloud Easier",
   "license": "MIT",
-  "publisher": "RedVanWorkshop",
+  "publisher": "SFCCDevOps",
   "categories": [
     "Other"
   ],
@@ -13,13 +13,13 @@
     "color": "#00435f",
     "theme": "dark"
   },
-  "homepage": "https://github.com/redvanworkshop/sfcc-vscode-extension#readme",
+  "homepage": "https://github.com/sfccdevops/sfcc-vscode-extension#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/redvanworkshop/sfcc-vscode-extension.git"
+    "url": "https://github.com/sfccdevops/sfcc-vscode-extension.git"
   },
   "bugs": {
-    "url": "https://github.com/redvanworkshop/sfcc-vscode-extension/issues"
+    "url": "https://github.com/sfccdevops/sfcc-vscode-extension/issues"
   },
   "engines": {
     "vscode": "^1.25.0"
@@ -38,8 +38,8 @@
   "contributors": [
     {
       "name": "Peter Schmalfeldt",
-      "email": "peter@redvanworkshop.com",
-      "url": "https://redvanworkshop.com"
+      "email": "me@peterschmalfeldt.com",
+      "url": "https://peterschmalfeldt.com"
     }
   ],
   "activationEvents": [
@@ -63,12 +63,12 @@
         {
           "command": "extension.searchCommerceCloudDocs",
           "when": "editorTextFocus && editorHasSelection && resourceExtname =~ /[isml|js]/)",
-          "group": "RVW@1"
+          "group": "SFCC@1"
         },
         {
           "command": "extension.openInBusinessManager",
           "when": "editorTextFocus && editorHasSelection && resourceExtname == .isml",
-          "group": "RVW@1"
+          "group": "SFCC@1"
         }
       ]
     },
